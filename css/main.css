@@ -1,0 +1,291 @@
+@charset "utf-8";
+/* 조선희 main.css */
+
+/*웹폰트*/
+@font-face{
+	font-family: 'Yrsa Bold';
+	src: url(../font/Yrsa/Yrsa-Bold.eot) format("eot"),
+		url(../font/Yrsa/Yrsa-Bold.otf) format("otf"),
+		url(../font/Yrsa/Yrsa-Bold.woff) format("woff");
+}
+
+@font-face{
+	font-family: 'Yrsa Light';
+	src: url(../font/Yrsa/Yrsa-Light.eot) format("eot"),
+		url(../font/Yrsa/Yrsa-Light.otf) format("otf"),
+		url(Yrsa-Light.woff) format("woff");
+}
+
+@font-face{
+	font-family: 'Yrsa Regular';
+	src: url(../font/Yrsa/Yrsa-Regular.eot) format("eot"),
+		url(../font/Yrsa/Yrsa-Regular.otf) format("otf"),
+		url(../font/Yrsa/Yrsa-Regular.woff) format("woff");
+}
+
+@font-face{
+	font-family: 'Yrsa Medium';
+	src: url(../font/Yrsa/Yrsa-Medium.eot) format("eot"),
+		url(../font/Yrsa/Yrsa-Medium.otf) format("otf"),
+		url(../font/Yrsa/Yrsa-Medium.woff) format("woff");
+}
+@font-face{
+	font-family: 'Yrsa SemiBold';
+	src: url(../font/Yrsa/Yrsa-SemiBold.eot) format("eot"),
+		url(../font/Yrsa/Yrsa-SemiBold.eototf) format("otf"),
+		url(../font/Yrsa/Yrsa-SemiBold.eot.woff) format("woff");
+}
+
+
+/*
+
+
+@font-face{
+	font-family:'Yrsa-light';
+	src:url('../font/Yrsa/Yrsa-light.eot');
+	src:url('../font/Yrsa/Yrsa-light.eot?#iefix') format('embedded-opentype'),
+	url('../font/Yrsa/Yrsa-light.woff') format('woff'),
+	url('../font/Yrsa/Yrsa-light.ttf') format('truetype');
+	src:local(※), url('../font/Yrsa/Yrsa-light.woff') format('woff');
+}*/
+html,body,div,span,object,iframe,h1,h2,h3,h4,h5,h6,p,
+blockquote,pre,abbr,address,cite,code,del,dfn,em,img,
+ins,kbd,q,samp,small,strong,sub,sup,var,b,i,dl,dt,dd,ol,ul,li,
+fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,
+article,aside,canvas,details,figcaption,figure,footer,header,hgroup,
+menu,nav,section,summary,time,mark,audio,video{margin:0; padding:0; font-family: "Yrsa Light";}
+
+article, aside, details, figcaption, figure, footer, hgroup, menu, nav, section {  display: block; font-family: "Yrsa Light";}
+
+ul,ol{list-style:none;}
+ul::after,ol::after,.cb::after{content:""; display:block; clear:both;}
+li {float:left;}
+img { border:none;}
+
+html, body {
+	overflow-y: hidden; overflow-x: hidden;
+	text-align:center;
+	width: 100%;
+	min-height: 100%;
+	height: 100%;
+	color: #000;
+	font-size:16px;
+	font-family:"Yrsa-light";
+}
+
+a{
+	color:#000;
+}
+
+/*  ---- 헤더 ----  */
+header{
+	position:absolute;
+	top:0;
+	left:0;
+	right:0;
+	background:#fff;
+	padding-top:0.938em;
+	padding-bottom:0.313em;
+	border-bottom:1px solid #fff;/*상단 아랫줄*/
+}
+header a.logo{
+	font-size:3em;
+	cursor: pointer;
+	font-family: "Yrsa-light";
+/*	padding:0.5em*/
+}
+
+header nav{
+	margin:0.625em 0
+}
+header nav a{
+	font-family:"Yrsa Light";
+	font-size:1em;
+	margin:0 0.5em;
+	text-decoration: none;
+}
+
+/*  ---- 하단 ----  */
+footer{
+	font-family:"Yrsa-light";
+	font-size:0.875em;
+	padding:0.375em 0 0.625em 0;
+/*	padding-bottom:3.125em;*/
+	border-top:1px solid #ccc;/*하단윗줄*/
+	position:absolute;
+	bottom:0;
+	left:0;
+	right:0;
+	background:white;
+	line-height:1em
+}
+
+footer a{
+	margin:0 .15em;
+	text-decoration: none;
+}
+footer .border{/*풋터 하단 줄*/	
+	border-bottom:1px solid #ccc;
+	margin-top:.7em;
+}
+
+
+
+		/*  ---- 메인 ----  */
+/*********컨텐츠페이지 1********/
+#cont1{
+	position:relative;
+	width:100%;
+	height:38%;
+	margin-top: 130px;
+}
+#cont1>ul{
+	width:100%;
+	height:100%;
+}
+
+#cont1>ul>li:first-child{
+	position:relative;/*부모자격*/
+	width:100%;
+	height:100%;
+	overflow:hidden;
+}
+/*이미지 슬라이드 자식*/
+#cont1 .flowImg{
+	position: relative;/*left 라서 relateive 티가 안남!*/
+	left: 0;/*초기값*/
+	width: 200%;/*자식요소를 모두 포함하는 크기*/
+	height: 100%;
+}
+#cont1 .flowImg>li{
+	position: relative;/*부모자격*/
+	width: 10%;/*부모 크기의 1/10크기-> 5개씩 보이게함*/
+	height: 100%;
+}
+
+
+#cont1 a:hover {
+  color: black;
+}
+
+
+/*
+#cont1 .flowImg>li>a:hover{
+	transition: .5s ease-out;
+	opacity: 0.5;
+}*/
+
+
+		
+
+#cont1 .flowImg img{
+	position: absolute;
+	top: 0;
+	left: 2.5%;
+	width: 95%;
+	height: 100%;
+}
+
+#cont1>ul>li:first-child{
+	position:relative;
+	width:100%;
+	height:100%;
+	overflow:hidden;
+}
+
+
+
+
+
+/*********컨텐츠페이지 1********/
+#cont2{
+	position:relative;
+	width:100%;
+	height:39%;
+	margin-top: 20px;
+}
+#cont2>ul{
+	width:100%;
+	height:100%;
+}
+
+#cont2>ul>li:first-child{
+	position:relative;/*부모자격*/
+	width:100%;
+	height:100%;
+	overflow:hidden;
+}
+/*이미지 슬라이드 자식*/
+#cont2 .flowImg2{
+	position: absolute;/*right기준이므로 absolute이여야함!!!*/
+	right: 0;/*초기값*/
+	width: 200%;/*자식요소를 모두 포함하는 크기*/
+	height: 100%;
+}
+#cont2 .flowImg2>li{
+	position: relative;/*부모자격*/
+	width: 10%;/*부모 크기의 1/10크기-> 5개씩 보이게함*/
+	height: 100%;
+}
+#cont2 .flowImg2 img{
+	position: absolute;
+	top: 0;
+	left: 2.5%;
+	width: 95%;
+	height: 100%;
+}
+
+#cont2>ul>li:first-child{
+	position:relative;
+	width:100%;
+	height:100%;
+	overflow:hidden;
+}
+
+
+main.artists{
+	display:flex;
+	box-orient:vertical;
+}
+
+main.artist section h2{
+	font-family:"Yrsa-light";
+	font-size:2.125em;
+	cursor:pointer}
+
+main a:hover,header a:hover,footer a:hover{color:#7a7a7a; /*text-decoration: underline;*/}
+
+
+.info-contents {
+    position: absolute;
+    top: 0;
+    left: 2.5%;
+	background-color: rgba(0,0,0,0.5);
+	width: 95%;
+	height: 100%;
+	opacity: 0;
+	transition: opacity .4s ease-out;
+}
+.info-contents:hover {
+	opacity: 1;
+}
+.info-contents>div {
+    position: relative;
+    top: 50%;
+	transform: translateY(-50%);
+}
+.info-contents p{
+	margin-bottom: 10px;
+    font-weight: bold;
+	text-align: center;
+    color: white;
+    font-size: 12px;
+}
+.info-contents h2{
+	font-size: 30px;
+    line-height: 36px;
+    margin-bottom: 10px;
+    color: white;
+}
+		
+
